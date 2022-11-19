@@ -7,7 +7,10 @@ const hub = new Hub();
 const channel = hub.channel();
 
 for (const code of list) {
-    hub.get(code);
+   const item = hub.get(code);
+   item.channel().subscribe(data =>{
+        console.log("item data :",data)
+   })
 }
 
 channel.subscribe((data) => {
