@@ -1,8 +1,8 @@
-import { Hub } from "./eventsource/hub";
+import { TickHub } from "./hub/hub";
 
 const list = ["002223","603363"];
 
-const hub = new Hub();
+const hub = new TickHub();
 
 const channel = hub.channel();
 
